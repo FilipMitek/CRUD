@@ -1,4 +1,4 @@
-import * as knex from "knex";
+import * as knex from 'knex';
 
 export class DBConnection {
     private client: string;
@@ -7,8 +7,7 @@ export class DBConnection {
     private password: string;
     private database: string;
 
-
-    constructor(client: string, host: string, user: string, password: string, database: string){
+    constructor(client: string, host: string, user: string, password: string, database: string) {
         this.client = client;
         this.host = host;
         this.user = user;
@@ -23,12 +22,12 @@ export class DBConnection {
         });
     }
 
-    public getConnection(){
+    public getConnection() {
         return {
             host: this.host,
             user: this.user,
             password: this.password,
             database: this.database,
-        }
+        };
     }
 }
